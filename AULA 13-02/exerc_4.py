@@ -103,9 +103,58 @@ class LoginIntranet:
         self.__email = email
         self.__senha = senha
 
+
 # 11 - tentando acessar um atributo de instância privado de fora da classe
 usuario = LoginIntranet('teste@gmail.com', '123456') # instanciando o objeto
 print(usuario._LoginIntranet__email)
 print(usuario._LoginIntranet__senha)
+
+
+# 12 - verificando as classes que estão relacionadas ao objeto usuario instanciado
+# print(dir(usuario))
+
+
+# 13 – Apresentando o valor de um atributo de instancia privado - Name Mangling
+print(f'\n O e-mail do objeto usuário é: {usuario._LoginIntranet__email}')
+print(f'\n A senha do objeto usuário é: {usuario._LoginIntranet__senha}')
+ 
+
+# 14 - Definindo uma classe e métodos para acessar seus atributos de instância público
+          # ou privado de fora da classe 
+class LoginIntranetDois:
+
+    def __init__(self, email, senha):
+        self.email = email
+        self.__senha = senha
+
+    def mostra_email(self):
+        print()
+        print(self.email)
+        print(f'O e-mail do objeto usuário_dois é: {self.email}')
+        
+    def mostra_senha(self):
+        print()
+        print(self.__senha)
+        print(f'A senha do objeto usuário_dois é: {self.__senha}')
+
+ 
+# 15 - Acessando atributos de instância público e privado de fora da classe
+usuario_dois = LoginIntranetDois('Gnomica@gmail.com', '654321') 
+usuario_dois.mostra_email()
+usuario_dois.mostra_senha()
+
+# 16 – Definindo objetos a partir de uma classe (molde)
+usuario_tres = LoginIntranetDois('Gnomica@gmail.com', '654321')
+usuario_quatro = LoginIntranetDois('Gertrudez@gmail.com', '01010101')
+usuario_cinco = LoginIntranetDois('Genoveva@gmail.com', '4503215')
+usuario_seis = LoginIntranetDois('Gerimunda@gmail.com', '987654')
+
+
+# 17 – Acessando atributos de instância público e privado de fora da
+        # classe dos objetos criados a partir da classe modelo
+usuario_tres.mostra_email()
+usuario_quatro.mostra_email()
+usuario_cinco.mostra_email()
+usuario_seis.mostra_email()
 
 
