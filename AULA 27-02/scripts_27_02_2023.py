@@ -64,7 +64,7 @@ print()
 
 produto_2  = Produto('Camisa do Grêmio', 'Camisa da temporada 2023 do Grêmio', 250.52)
 print(produto_2.desconto(25))
-"""
+
 
 # 30 - Exercício
 class Usuario:
@@ -95,14 +95,14 @@ print(usuario_um.mostrar_email_senha())
 print(usuario_dois.mostrar_email_senha())
 print(usuario_tres.mostrar_email_senha())
 
-
+"""
 # - Feita a instalação - importe a biblioteca passlib para seu código:  
 
 from passlib.hash import pbkdf2_sha512 as cryptografa
 
 # - Para criptografar a senha a sintaxe é:  
 from passlib.hash import pbkdf2_sha512 as cryptografa
-"""
+
 
 # 32 - Refatore a classe Usuario para receber o atributo senha criptografada, depois
           # desenvolva um método na mesma classe que retorne o nome completo e a
@@ -126,7 +126,7 @@ usuario_tres = Usuario('Genoveva','Agnóstica','Genoveva@gmail.com', '4503215')
 print('\n',usuario_um.nome_completo_senha(),'\n')
 print(usuario_dois.nome_completo_senha(),'\n')
 print(usuario_tres.nome_completo_senha())
-
+"""
 
 # 33 - Aplicando métodos de Classe 
 from passlib.hash import pbkdf2_sha512 as cryptografa
