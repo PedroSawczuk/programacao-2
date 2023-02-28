@@ -95,7 +95,7 @@ print(usuario_um.mostrar_email_senha())
 print(usuario_dois.mostrar_email_senha())
 print(usuario_tres.mostrar_email_senha())
 
-"""
+
 # - Feita a instalação - importe a biblioteca passlib para seu código:  
 
 from passlib.hash import pbkdf2_sha512 as cryptografa
@@ -126,7 +126,6 @@ usuario_tres = Usuario('Genoveva','Agnóstica','Genoveva@gmail.com', '4503215')
 print('\n',usuario_um.nome_completo_senha(),'\n')
 print(usuario_dois.nome_completo_senha(),'\n')
 print(usuario_tres.nome_completo_senha())
-"""
 
 # 33 - Aplicando métodos de Classe 
 from passlib.hash import pbkdf2_sha512 as cryptografa
@@ -183,6 +182,7 @@ class Usuario:
         return self.__email.split('@')[0]
 
 usuario_dois = Usuario('Gertrudez','Sancré','Gertrudez@gmail.com', '01010101')
+"""
 
 
 # 35 - Métodos de classe estático
@@ -203,7 +203,7 @@ class Usuario:
 
     @staticmethod
     def instituicao():
-        return 'Instituto Federal de Rondônia - Campus Ariquemes - 2022'    
+        return 'Instituto Federal de Rondônia - Campus Ariquemes - 2023'    
     
     def __init__(self, nome, sobrenome, email, senha):
         self.__id = Usuario.controle + 1
@@ -229,5 +229,5 @@ print(Usuario.instituicao())
 usuario_dois = Usuario('Gertrudez','Sancré','Gertrudez@gmail.com', '01010101')
 
 
-//  ================ //
-"""
+
+
